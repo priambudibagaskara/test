@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { Helmet } from "react-helmet";
+import "./App.css";
 
 function App() {
+  const metaTitle = 'Sambungin akunmu, yuk!';
+  const metaDescription = 'Bisa dapat keuntungan ekstra, lho~';
+
+  const directToSuccessPage = () => window.location.assign('https://www.tokopedia.com');
+
+  useEffect(directToSuccessPage, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Helmet>
+      <meta name="title" content={metaTitle} />
+      <meta name="description" content={metaDescription} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@tokopedia" />
+      <meta name="twitter:creator" content="@tokopedia" />
+      <meta name="twitter:title" content={metaTitle} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image:src" content="https://images.tokopedia.net/img/account-link/Gojek-x-Tokped-2x1.png" />
+      <meta property="og:image" content="https://images.tokopedia.net/img/account-link/Gojek-x-Tokped-2x1.png" />
+      <meta property="og:title" content={metaTitle} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:site_name" content="Tokopedia" />
+      <meta property="og:url" content={'https://www.tokopedia.com'} />
+      <link rel="canonical" href={'https://www.tokopedia.com'} />
+    </Helmet>
   );
 }
 
