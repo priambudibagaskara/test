@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 function App() {
   const metaTitle = "Sambungin akunmu, yuk!";
   const metaDescription = "Bisa dapat keuntungan ekstra, lho~";
 
-  // const directToSuccessPage = () =>
-  //   window.location.assign("https://www.tokopedia.com");
+  const directToSuccessPage = () =>
+    window.location.href = "https://www.tokopedia.com";
 
-  // useEffect(directToSuccessPage, []);
+  useEffect(directToSuccessPage, []);
 
   return (
     <>
       <Helmet>
+        <title>{metaTitle}</title>
         <meta name="title" content={metaTitle} />
         <meta name="description" content={metaDescription} />
         <meta name="twitter:card" content="summary_large_image" />
