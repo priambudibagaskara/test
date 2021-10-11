@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 
 function App() {
   const metaTitle = "Sambungin akunmu, yuk!";
   const metaDescription = "Bisa dapat keuntungan ekstra, lho~";
 
-  const directToSuccessPage = () =>
-    window.location.assign("https://www.tokopedia.com");
+  // const directToSuccessPage = () =>
+  //   window.location.assign("https://www.tokopedia.com");
 
   // useEffect(directToSuccessPage, []);
 
